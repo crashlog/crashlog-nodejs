@@ -1,6 +1,7 @@
 
 var http = require('http'),
-    winston = require('winston');
+    winston = require('winston'),
+    winstonCrashLog = require('./lib/winston-crashlog');
 
 
 var logger = new (winston.Logger)({
@@ -9,7 +10,8 @@ var logger = new (winston.Logger)({
     ]
 });
 
-winston.handleExceptions(new winston.transports.Http({ 'host': 'localhost', 'port': 8000, 'path': '/notify' }));
+//winston.handleExceptions(new winston.transports.Http({ 'host': 'localhost', 'port': 8000, 'path': '/notify' }));
+winston.handleExceptions(new winston.transports.CrashLog({ 'host': 'localhost', 'port': 8000, 'path': '/notify' }));
 
-//logger.log('info', 'Hello webhook log files!', { 'foo': 'bar' });
+//logger.log('error', 'Hello webhook log files!', { 'foo': 'bar' });
 throw new Error('Hello, winston!');
