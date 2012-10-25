@@ -1,0 +1,41 @@
+{
+    "name":"winston-crashlog",
+    "description":"The best project ever.",
+    "version":"0.1.0",
+    "homepage":"https://github.com/markw/winston-crashlog",
+    "author":{
+        "name":"Mark Wolfe",
+        "email":"mark@wolfe.id.au"
+    },
+    "repository":{
+        "type":"git",
+        "url":"git://github.com/markw/winston-crashlog.git"
+    },
+    "bugs":{
+        "url":"https://github.com/markw/winston-crashlog/issues"
+    },
+    "licenses":[
+        {
+            "type":"MIT",
+            "url":"https://github.com/markw/winston-crashlog/blob/master/LICENSE-MIT"
+        }
+    ],
+    "main":"lib/winston-crashlog",
+    "engines":{
+        "node":">= 0.6.0"
+    },
+    "scripts":{
+        "test":"grunt test"
+    },
+    "dependencies":{
+        "winston":"*",
+        "ofuda":"*"
+    },
+    "devDependencies":{
+        "grunt":"~0.3.17",
+        "grunt-simple-mocha": "~0.2.0",
+        "mocha": "~1.6.0",
+        "should": "~1.2.0"
+    },
+    "keywords":[]
+}
