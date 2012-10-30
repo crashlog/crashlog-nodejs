@@ -1,0 +1,100 @@
+
+
+exports.sample_exception = { date: 'Mon Oct 29 2012 18:27:05 GMT+1100 (EST)',
+    process:
+    { pid: 6899,
+        uid: 501,
+        gid: 20,
+        cwd: '/Users/markw/Code/Javascript/winston-crashlog',
+        execPath: '/usr/local/Cellar/node/0.8.8/bin/node',
+        version: 'v0.8.8',
+        argv:
+            [ 'node',
+                '/Users/markw/Code/Javascript/winston-crashlog/httptest.js' ],
+        memoryUsage: { rss: 19165184, heapTotal: 11312128, heapUsed: 6158120 } },
+    os:
+    { loadavg: [ 0.2744140625, 0.68896484375, 0.90576171875 ],
+        uptime: 42006 },
+    trace:
+        [ { column: 7,
+            file: '/Users/markw/Code/Javascript/winston-crashlog/httptest.js',
+            function: '',
+            line: 17,
+            method: null,
+            native: false },
+            { column: 26,
+                file: 'module.js',
+                function: 'Module._compile',
+                line: 449,
+                method: '_compile',
+                native: false },
+            { column: 10,
+                file: 'module.js',
+                function: 'Object.Module._extensions..js',
+                line: 467,
+                method: 'Module._extensions..js',
+                native: false },
+            { column: 32,
+                file: 'module.js',
+                function: 'Module.load',
+                line: 356,
+                method: 'load',
+                native: false },
+            { column: 12,
+                file: 'module.js',
+                function: 'Function.Module._load',
+                line: 312,
+                method: 'Module._load',
+                native: false },
+            { column: 10,
+                file: 'module.js',
+                function: 'Module.runMain',
+                line: 492,
+                method: 'runMain',
+                native: false },
+            { column: 9,
+                file: 'node.js',
+                function: 'process.startup.processNextTick.process._tickCallback',
+                line: 244,
+                method: 'startup.processNextTick.process._tickCallback',
+                native: false } ],
+    stack:
+        [ 'Error: Hello, winston!',
+            '    at Object.<anonymous> (/Users/markw/Code/Javascript/winston-crashlog/httptest.js:17:7)',
+            '    at Module._compile (module.js:449:26)',
+            '    at Object.Module._extensions..js (module.js:467:10)',
+            '    at Module.load (module.js:356:32)',
+            '    at Function.Module._load (module.js:312:12)',
+            '    at Module.runMain (module.js:492:10)',
+            '    at process.startup.processNextTick.process._tickCallback (node.js:244:9)' ] };
+
+exports.sampleMessage = { payload: { notifier: { name: 'nodejsapp', version: '0.0.1' },
+    event:
+    { message: 'uncaughtException',
+        type: 'Error',
+        timestamp: 'Mon, 29 Oct 2012 07:27:05 GMT' },
+    backtrace:
+        [ { file: '/Users/markw/Code/Javascript/winston-crashlog/httptest.js',
+            number: 17,
+            method: null },
+            { file: 'module.js', number: 449, method: '_compile' },
+            { file: 'module.js',
+                number: 467,
+                method: 'Module._extensions..js' },
+            { file: 'module.js', number: 356, method: 'load' },
+            { file: 'module.js', number: 312, method: 'Module._load' },
+            { file: 'module.js', number: 492, method: 'runMain' },
+            { file: 'node.js',
+                number: 244,
+                method: 'startup.processNextTick.process._tickCallback' } ],
+    environment: { platform: 'v0.8.8' } } };
+
+// "POST\napplication/json\n\nTue, 30 Oct 2012 19:48:27 GMT\n/events"
+exports.samplePostRequest = {
+    method:'POST',
+    path:'/events',
+    headers:{
+        'Content-Type':'application/json',
+        'Date':'Tue, 30 Oct 2012 19:48:27 GMT'
+    }
+};

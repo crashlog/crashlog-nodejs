@@ -7,14 +7,14 @@ Install the module with: `npm install winston-crashlog`
 
 ```javascript
 var winston_crashlog = require('winston-crashlog');
-winston_crashlog.awesome(); // "awesome"
+
+var logger = new (winston.Logger)({
+    transports: [
+      new (winston.transports.Crashlog)({ accessKeyId: '1234', accessKeySecret: '4567890' })
+    ]
+});
+
 ```
-
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
