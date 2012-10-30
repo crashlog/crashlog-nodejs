@@ -1,7 +1,7 @@
 {
     "name":"winston-crashlog",
     "description":"Winston transport for crashlog.io.",
-    "version":"0.1.0",
+    "version":"0.1.1",
     "homepage":"https://github.com/wolfeidau/winston-crashlog",
     "author":{
         "name":"Mark Wolfe",

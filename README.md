@@ -1,6 +1,6 @@
 # winston-crashlog
 
-The best project ever.
+Winston transport for the [crashlog.io](http://crashlog.io) service.
 
 ## Getting Started
 Install the module with: `npm install winston-crashlog`
