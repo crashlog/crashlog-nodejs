@@ -16,6 +16,23 @@ var logger = new (winston.Logger)({
 
 ```
 
+## Testing
+
+I have included a small test program named httptest.js, to use it:
+
+Create a directory in your home called .crashlog then add a file containing the credentials from your crash log project.
+
+```javascript
+exports.creds = {'accessKeyId': 'XXXX', 'accessKeySecret': 'XXX'};
+```
+
+Then simply run use node to run the script.
+```shell
+node crashlogtest.js
+```
+
+
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
 
