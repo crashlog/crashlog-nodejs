@@ -2,6 +2,9 @@
 
 Winston transport for the [crashlog.io](http://crashlog.io) service.
 
+[![Build Status](https://secure.travis-ci.org/wolfeidau/winston-crashlog.png)](http://travis-ci.org/wolfeidau/winston-crashlog)
+
+
 ## Getting Started
 Install the module with: `npm install winston-crashlog`
 
