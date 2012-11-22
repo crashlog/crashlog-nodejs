@@ -18,7 +18,7 @@ To enable logging to Crashlog via winston in express you will need the following
 * winston-crashlog
 
 Below is a fragment from an express application illustrating it's configuration along side the console logger, note in this
-example the accessKeyId and accessKeySecret are configured outside this code and loaded with nconf.
+example the `accessKeyId` and `accessKeySecret` are configured outside this code and loaded with `nconf`.
 
 ```javascript
 module.exports = function (app, configurations, express) {
