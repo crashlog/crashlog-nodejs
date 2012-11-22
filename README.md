@@ -8,15 +8,39 @@ Winston transport for the [crashlog.io](http://crashlog.io) service.
 ## Getting Started
 Install the module with: `npm install winston-crashlog`
 
+
+## Using Crashlog from within Express
+
+To enable logging to Crashlog via winston in express you will need the following modules.
+
+* winston
+* express-winston
+* winston-crashlog
+
+Below is a fragment from an express application illustrating it's configuration along side the console logger, note in this
+example the accessKeyId and accessKeySecret are configured outside this code and loaded with nconf.
+
 ```javascript
-var winston_crashlog = require('winston-crashlog');
+module.exports = function (app, configurations, express) {
 
-var logger = new (winston.Logger)({
-    transports: [
-      new (winston.transports.Crashlog)({ accessKeyId: '1234', accessKeySecret: '4567890' })
-    ]
-});
+    var winston = require('winston');
+    var expressWinston = require('express-winston');
+    var CrashLog = require('winston-crashlog').CrashLog;
 
+    ...
+    app.use(expressWinston.errorLogger({
+        transports:[
+            new winston.transports.Console({
+                json:true,
+                colorize:true
+            }),
+            new CrashLog({debug:true, accessKeyId:nconf.get('accessKeyId'), accessKeySecret:nconf.get('accessKeySecret') })
+        ]
+    }));
+    ...
+
+    return app;
+}
 ```
 
 ## Testing
