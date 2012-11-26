@@ -1,7 +1,7 @@
 {
     "name":"winston-crashlog",
     "description":"Winston transport for crashlog.io.",
-    "version":"0.1.3",
+    "version":"0.1.4",
     "homepage":"https://github.com/wolfeidau/winston-crashlog",
     "author":{
         "name":"Mark Wolfe",
@@ -29,7 +29,7 @@
     },
     "dependencies":{
         "winston":"*",
-        "ofuda":"*"
+        "ofuda":"~0.3.0"
     },
     "devDependencies":{
         "grunt":"~0.3.17",
